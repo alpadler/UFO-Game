@@ -39,7 +39,7 @@ document.addEventListener("keydown", (e) => {
 
 
 function checkCollision(meteor) {
-sound.play();
+
   return (
     player.x < meteor.x + 35 &&
     player.x + 30 > meteor.x &&
@@ -54,7 +54,7 @@ function gameOver() {
 }
 
 function draw() {
-
+sound.play();
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.drawImage(playerImg, player.x, player.y, 180, 90);
@@ -76,5 +76,6 @@ function draw() {
 }
 
 draw();
+
 
 
